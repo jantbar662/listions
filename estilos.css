@@ -1,0 +1,35 @@
+
+#cabecera{
+	display:flex;
+	flex-direction:row;
+	background-color:lightgrey;
+	text-align:centre;
+
+}
+#home{
+	margin:20px;
+
+}
+#busqueda{
+	margin: 20px 340px 20px 340px;
+	text-align:centre;
+	position: centre;
+}
+#user{
+	margin:20px;
+	position: absolute;right: 0; top: 0;
+
+}
+
+#contenidos{
+	background-color:
+
+}
+
+#{}
+
+#{}
+
+#{}
+
+#{}
