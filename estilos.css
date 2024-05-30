@@ -1,35 +1,94 @@
 
+body{
+	font-family: "Roboto", sans-serif;
+	  font-weight: 400;
+	  font-style: normal;
+
+}
+
 #cabecera{
+	height:75px;
 	display:flex;
 	flex-direction:row;
 	background-color:lightgrey;
 	text-align:centre;
+	border: 2px solid black;
+	
 
 }
 #home{
 	margin:20px;
+	position: absolute; left: 0; top: 0;
+	width: 50px; 
+	height: 50px;
 
 }
 #busqueda{
-	margin: 20px 340px 20px 340px;
-	text-align:centre;
-	position: centre;
+	margin: 20px 340px 30px 440px;
+	align-items:centre;
+	position: center; top: 0;
+	
 }
+
+.buscar{
+	margin: 20px;
+	
+}
+
 #user{
 	margin:20px;
 	position: absolute;right: 0; top: 0;
+	width: 60px;
+	height: 60px;
 
+}
+
+#menu{
+	visibility: hidden;
+	background-color: lightgrey;
+	padding: 20px;
 }
 
 #contenidos{
-	background-color:
+	background-color: white;
+	display: flex; flex-direction: row;
 
 }
 
-#{}
+li{
+	list-style:none;
 
-#{}
+}
 
-#{}
+#contenido{
+	padding:0px 0px 0px 300px;
+	display: flex; flex-direction: column;
+}
 
-#{}
+
+#contenidoCrear{
+	visibility: hidden;
+
+}
+
+#contenidoVer{
+	visibility: hidden;
+
+}
+
+#lista{
+	visibility: hidden;
+
+}
+#comentarios{
+	display: flex; flex-direction:row;
+}
+#pros{
+	border: 2px solid black ;
+	
+}
+#contras{
+    border: 2px solid black ;
+	
+}
+
