@@ -3,34 +3,87 @@
 <head>
 	<title>listions.com</title>
 	<meta charset="UTF-8">
-	<meta description="Foro lleno de listas interactivas para compar, valorar o debatir sobre diferentes temas.">
+	<meta description="Foro lleno de listas interactivas para comparar, valorar o debatir sobre diferentes temas.">
 	<link rel="stylesheet" href="estilos.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 	<script>
-		function {
+		//Pros
+		var pros= document.getElementById("pros");
+		var storedPros=JSON.parse(localStorage.getItem("pros")) || [];
+		for (i = 0; i < storedPros.length; i++) {
+			var nuevoElemento = document.createElement('li');
+			nuevoElemento.textContent = elemet;
+			pros.appendChild(nuevoElemento);
 		}
-		
 	</script>
 </head>
-
 <body>
 	<div id="cabecera">
-		<img id="home" src="img/home.png" onclick="" >
+		<img id="home" src="img/home.png" onclick="abrirMenu()">
 		<center>
 		<div id="busqueda">
 			<label class="buscar" for="buscar">Buscar...</label>
-			<input class="buscar" type="text">
-			<button class="buscar"onclick="enviar()">Enviar</button>
+			<input id="buscar" class="buscar" type="text">
+			<button class="buscar" onclick="enviar()">Enviar</button>
 		</div>
 		</center>
 		<img id="user" src="img/user.png" >
 	</div>
 	<div id="contenidos">
-		<div id="menu"></div>
-			
+		<div id="menu">
+			<ul>
+				<li></li><button onclick="mostrarCrear()">Crear lista</button></li>
+				<br>
+				<li><button onclick="mostrarVer()">Ver listas</button></li>
+			</ul>
+		</div>
 		<div id="contenido">
-			
+			<div id="contenidoCrear">
+				<center>
+					<h2>Crear lista</h2>
+					<label class="crearLista" for="titulo lista">Título de la lista: </label>
+					<input id="tituloLista" class="crearLista" type="text">
+					<button class="crearLista" onclick="crearLista()">Enviar</button>
+				</center>
+			</div>
+			<div id="contenidoVer">
+				<center>
+					<h2>Ver listas</h2>
+					<button id="nombreListaV" onclick="verLista()"></button>
+				</center>
+			</div>
+			<div id="lista">
+				<center>
+					<h2 id="nombreListaM"></h2>
+					<div id="comentarios">
+						<div id="pros">
+							<label for="Apro">Añadir pro</label>
+							<input id="Apro"  type="text">
+							<button onclick="anadirPro()">Publicar</button>
+							<ul id="pros">
+    							
+							</ul>
+						</div>
+						<div id="contras">
+							<label for="Acontra">Añadir contra</label>
+							<input id="Acontra"  type="text">
+							<button onclick="anadirContra()">Publicar</button>
+							<ul id="contras">
+
+							</ul>
+						</div>
+					</div>
+					
+				</center>
+			</div>
 		</div>
 	</div>
+	
+	<script src="scripts.js"></script>
 </body>
+
+</html>
 
 </html>
